@@ -1,9 +1,9 @@
-import { Button, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import sofia2 from "../img/sofia_immagine_compleanno2.jpg";
 import { useState } from "react";
 
 const Home = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   return (
     <div className="container-cuori">
       <Row>
@@ -25,16 +25,21 @@ const Home = () => {
               vita più bella ogni giorno e mi basta un tuo sorriso per sentirmi
               al settimo cielo. <br />
               Buon compleanno, cuore mio. Ti amo tantissimo, e sono qui, sempre
-              con te. <br />
+              per te. <br />
             </p>
           </div>
         </Col>
         <Col xs={12}>
           <div className="d-flex justify-content-center mt-5">
-            {show && <p>Codice segreto</p>}
+            <button
+              onClick={() => setShow(!show)}
+              className="bottone-codice border border-0 text-dark fs-4 btn"
+            >
+              SVELA REGALO
+            </button>
           </div>
-          <div className="d-flex justify-content-center">
-            <Button onClick={() => setShow(!show)}>Svela codice regalo</Button>
+          <div className="d-flex justify-content-center mt-3">
+            {show && <p>Codice segreto</p>}
           </div>
         </Col>
       </Row>

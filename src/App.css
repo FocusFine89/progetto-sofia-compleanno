@@ -10,3 +10,12 @@ Body {
 .lettera-auguri {
   width: 50%;
 }
+
+.bottone-codice {
+  background-color: #ffb5a6;
+}
+
+.bottone-codice:hover {
+  background-color: #ffb5a6;
+  color: #ffb5a6;
+}
